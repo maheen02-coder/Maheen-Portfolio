@@ -3,6 +3,7 @@ import "./globals.css";
 import Main from "./components/main/page";
 import Home from "./components/Home/home";
 import MyWorks from "./components/mywork/page";
+import Skills from "./components/skills/page";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
         <Home/>
         <Main/>
         <MyWorks/>
+        <Skills/>
         {children}
 
       </body>
