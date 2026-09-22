@@ -14,7 +14,7 @@ const MyWorks = () => {
   title: "Burger Builder",
   description:
     "An interactive burger builder where users can add and remove ingredients.",
-  image: "/burger.png",
+  image: "/burger.PNG",
   live: "https://burger-builder-jet.vercel.app/",
   github: "https://github.com/maheen02-coder/Burger-Builder",
 },
