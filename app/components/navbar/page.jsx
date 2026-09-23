@@ -14,7 +14,7 @@ const Navbar = () => {
     { name: "Contact", id: "contact" },
   ];
   return (
-    <nav  git status
+    <nav
       className="
         fixed left-0 top-0 z-[100]
         h-screen w-56
