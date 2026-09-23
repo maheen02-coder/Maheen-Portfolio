@@ -1,5 +1,7 @@
+"use client";
+
 import React from "react";
-import "./mywork.css";
+
 const MyWorks = () => {
   const projects = [
     {
@@ -9,15 +11,17 @@ const MyWorks = () => {
       image: "/collegeForm.PNG",
       live: "https://college-form-handling.vercel.app/",
       github: "https://github.com/maheen02-coder/College-Form-handling",
+      number: "01",
     },
     {
-  title: "Burger Builder",
-  description:
-    "An interactive burger builder where users can add and remove ingredients.",
-  image: "/burger.PNG",
-  live: "https://burger-builder-jet.vercel.app/",
-  github: "https://github.com/maheen02-coder/Burger-Builder",
-},
+      title: "Burger Builder",
+      description:
+        "An interactive burger builder where users can add and remove ingredients.",
+      image: "/burger.PNG",
+      live: "https://burger-builder-jet.vercel.app/",
+      github: "https://github.com/maheen02-coder/Burger-Builder",
+      number: "02",
+    },
     {
       title: "PUPASSURE",
       description:
@@ -25,81 +29,287 @@ const MyWorks = () => {
       image: "/pupassure.PNG",
       live: "#",
       github: "#",
+      number: "03",
     },
   ];
+
   return (
-    <section className="min-h-screen bg-black text-white px-8 py-24">
-      {" "}
-      {/* Heading */}{" "}
-      <div className="text-center mb-16">
-        {" "}
-        <p className="text-sm uppercase tracking-[5px] text-gray-400">
-          {" "}
-          Portfolio{" "}
-        </p>{" "}
-        <h2 className="text-5xl font-bold mt-3">
-          {" "}
-          My <span className="text-gray-400">Works</span>{" "}
-        </h2>{" "}
-        <p className="text-gray-400 mt-5 max-w-xl mx-auto">
-          {" "}
-          A collection of projects I have built while learning and working with
-          modern web technologies.{" "}
+    <section
+      id="works"
+      className="
+        relative min-h-screen
+        overflow-hidden
+        bg-black
+        px-8 py-24
+        text-white
+        max-md:px-5
+      "
+    >
+      {/* Background Glow */}
+      <div
+        className="
+          pointer-events-none
+          absolute left-[-150px] top-[30%]
+          h-96 w-96
+          rounded-full
+          bg-purple-500/10
+          blur-[120px]
+          animate-pulse
+        "
+      />
+
+      <div
+        className="
+          pointer-events-none
+          absolute bottom-[-150px] right-[-100px]
+          h-96 w-96
+          rounded-full
+          bg-blue-500/10
+          blur-[120px]
+          animate-pulse
+        "
+      />
+
+      {/* Heading */}
+      <div
+        className="
+          relative z-10
+          mx-auto mb-16
+          max-w-6xl
+        "
+      >
+        <p
+          className="
+            mb-4
+            text-sm uppercase
+            tracking-[6px]
+            text-gray-500
+          "
+        >
+          Selected Projects
+        </p>
+
+        <h2
+          className="
+            text-5xl font-bold
+            md:text-7xl
+          "
+        >
+          My <span className="text-gray-500">Works.</span>
+        </h2>
+
+        <p
+          className="
+            mt-5 max-w-2xl
+            leading-7
+            text-gray-400
+          "
+        >
+          A collection of projects I've built while exploring modern
+          technologies, creative interfaces, and full-stack development.
         </p>
       </div>
-      {/* Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-        {projects.map((project, index) => (
+
+      {/* Projects */}
+      <div
+        className="
+          relative z-10
+          mx-auto
+          flex max-w-6xl
+          flex-wrap
+          justify-center
+          gap-8
+        "
+      >
+        {projects.map((project) => (
           <div
-            key={index}
-            className="group border border-gray-800 bg-[#0a0a0a] overflow-hidden hover:border-gray-500 transition duration-300"
+            key={project.title}
+            className="
+              group
+              relative
+              w-[350px]
+              overflow-hidden
+              rounded-2xl
+              border border-white/10
+              bg-white/[0.03]
+
+              transition-all duration-700
+              hover:-translate-y-4
+              hover:border-white/30
+              hover:bg-white/[0.06]
+              hover:shadow-[0_25px_70px_rgba(255,255,255,0.08)]
+
+              max-sm:w-full
+            "
           >
+            {/* Project Number */}
+            <div
+              className="
+                absolute right-5 top-5
+                z-20
+                text-xs
+                tracking-[3px]
+                text-white/50
+                transition-all duration-500
+                group-hover:text-white
+              "
+            >
+              {project.number}
+            </div>
+
             {/* Image */}
-            <div className="h-56 overflow-hidden">
+            <div
+              className="
+                relative
+                h-60
+                overflow-hidden
+              "
+            >
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                className="
+                  h-full w-full
+                  object-cover
+
+                  transition-all duration-700
+                  group-hover:scale-110
+                  group-hover:rotate-1
+                "
+              />
+
+              {/* Image Overlay */}
+              <div
+                className="
+                  absolute inset-0
+                  bg-black/20
+                  transition-all duration-500
+                  group-hover:bg-black/0
+                "
+              />
+
+              {/* Shine */}
+              <div
+                className="
+                  absolute -left-[100%] top-0
+                  h-full w-1/2
+                  skew-x-[-20deg]
+                  bg-white/10
+
+                  transition-all duration-1000
+                  group-hover:left-[150%]
+                "
               />
             </div>
+
             {/* Content */}
             <div className="p-6">
-              {" "}
-              <h3 className="text-2xl font-semibold mb-3">
-                {" "}
-                {project.title}{" "}
-              </h3>{" "}
-              <p className="text-gray-400 text-sm leading-6 mb-6">
-                {" "}
-                {project.description}{" "}
-              </p>{" "}
-              {/* Buttons */}{" "}
-              <div className="flex gap-3">
-                {" "}
+              <h3
+                className="
+                  text-2xl font-semibold
+                  transition-all duration-500
+                  group-hover:translate-x-2
+                "
+              >
+                {project.title}
+              </h3>
+
+              <p
+                className="
+                  mt-3
+                  min-h-[72px]
+                  text-sm
+                  leading-6
+                  text-gray-400
+                "
+              >
+                {project.description}
+              </p>
+
+              {/* Buttons */}
+              <div className="mt-6 flex gap-3">
                 <a
                   href={project.live}
                   target="_blank"
                   rel="noreferrer"
-                  className="px-5 py-2 bg-white text-black text-sm font-medium hover:bg-gray-300 transition"
+                  className="
+                    rounded-lg
+                    bg-white
+                    px-5 py-2.5
+                    text-sm font-medium
+                    text-black
+
+                    transition-all duration-300
+                    hover:-translate-y-1
+                    hover:bg-gray-200
+                    hover:shadow-[0_8px_25px_rgba(255,255,255,0.15)]
+                  "
                 >
-                  {" "}
-                  Live Demo{" "}
-                </a>{" "}
+                  Live Demo
+                </a>
+
                 <a
                   href={project.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="px-5 py-2 border border-gray-700 text-white text-sm hover:bg-white hover:text-black transition"
+                  className="
+                    rounded-lg
+                    border border-white/20
+                    px-5 py-2.5
+                    text-sm
+                    text-white
+
+                    transition-all duration-300
+                    hover:-translate-y-1
+                    hover:border-white
+                    hover:bg-white
+                    hover:text-black
+                  "
                 >
-                  {" "}
-                  GitHub{" "}
-                </a>{" "}
-              </div>{" "}
-            </div>{" "}
+                  GitHub
+                </a>
+              </div>
+            </div>
+
+            {/* Bottom Glow */}
+            <div
+              className="
+                pointer-events-none
+                absolute
+                -bottom-24
+                left-1/2
+                h-32 w-32
+                -translate-x-1/2
+                rounded-full
+                bg-white/10
+                blur-3xl
+
+                transition-all duration-700
+                group-hover:scale-[2]
+              "
+            />
           </div>
-        ))}{" "}
-      </div>{" "}
+        ))}
+      </div>
+
+      {/* Bottom Line */}
+      <div
+        className="
+          relative z-10
+          mx-auto mt-20
+          max-w-6xl
+          border-t border-white/10
+          pt-6
+          text-xs uppercase
+          tracking-[4px]
+          text-white/30
+        "
+      >
+        Built with code & creativity.
+      </div>
     </section>
   );
 };
+
 export default MyWorks;
+

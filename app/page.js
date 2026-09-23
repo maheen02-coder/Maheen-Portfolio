@@ -1,16 +1,21 @@
-// "use client"
-// import { useState } from "react"
+import Contact from "./components/Contact/contact";
+import Home from "./components/Home/home";
+import Intro from "./components/Introduction/Intro";
+import Main from "./components/main/page";
+import MyWorks from "./components/mywork/page";
+import Skills from "./components/skills/page";
+
 
 export default function Page() {
-// const [count, setcount]= useState(0)
-// console.log(count);
-
-// const updatecount = ()=> {
-// setcount(count +1)  
-// }
-
-//   return (<>
-  {/* <div>
-  <button onClick={updatecount}></button>
-  </div> */}
+  return (
+    <>
+      <Home/>
+      <Intro/>
+      <Main />
+      <MyWorks />
+      <Skills/>
+      <Contact/>
+      
+    </>
+  );
 }

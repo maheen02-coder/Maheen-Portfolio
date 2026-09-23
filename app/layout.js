@@ -5,6 +5,7 @@ import Home from "./components/Home/home";
 import MyWorks from "./components/mywork/page";
 import Skills from "./components/skills/page";
 import Navbar from "./components/navbar/page";
+import Intro from "./components/Introduction/Intro";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -26,14 +27,10 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+    <body className="min-h-full flex flex-col">
         <Navbar />
 
-        <div className="ml-56 w-[calc(100%-14rem)]">
-          <Home />
-          <Main />
-          <MyWorks />
-          <Skills />
+        <div className="ml-56 w-[calc(100%-14rem)] max-md:ml-0 max-md:w-full">
           {children}
         </div>
       </body>
