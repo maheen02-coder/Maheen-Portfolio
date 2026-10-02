@@ -6,6 +6,7 @@ import MyWorks from "./components/mywork/page";
 import Skills from "./components/skills/page";
 import Navbar from "./components/navbar/page";
 import Intro from "./components/Introduction/Intro";
+import { Analytics } from "@vercel/analytics/next";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
         <div className="ml-56 w-[calc(100%-14rem)] max-md:ml-0 max-md:w-full">
           {children}
         </div>
+        <Analytics />
       </body>
     </html>
   );
