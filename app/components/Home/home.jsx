@@ -1,5 +1,4 @@
 import React from "react";
-
 const Home = () => {
   return (
     <main
@@ -12,7 +11,6 @@ const Home = () => {
         max-md:px-5
       "
     >
-      {/* Background Video */}
       <video
         className="
           absolute inset-0
@@ -27,11 +25,7 @@ const Home = () => {
       >
         <source src="/codeimg.mp4" type="video/mp4" />
       </video>
-
-      {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/55" />
-
-      {/* Animated Glow */}
       <div
         className="
           absolute left-[15%] top-[20%]
@@ -42,7 +36,6 @@ const Home = () => {
           animate-pulse
         "
       />
-
       <div
         className="
           absolute bottom-[10%] right-[15%]
@@ -53,8 +46,6 @@ const Home = () => {
           animate-pulse
         "
       />
-
-      {/* Content */}
       <div
         className="
           relative z-10
@@ -65,7 +56,6 @@ const Home = () => {
           max-lg:gap-10
         "
       >
-        {/* Hero Text */}
         <div
           className="
             group
@@ -83,7 +73,6 @@ const Home = () => {
             max-md:p-7
           "
         >
-          {/* Animated Border Glow */}
           <div
             className="
               pointer-events-none
@@ -94,7 +83,6 @@ const Home = () => {
               group-hover:border-white/20
             "
           />
-
           <p
             className="
               mb-5
@@ -107,7 +95,6 @@ const Home = () => {
           >
             Full-Stack Developer
           </p>
-
           <h1
             className="
               font-serif
@@ -122,14 +109,10 @@ const Home = () => {
             <br />
             <span className="text-gray-400">Deploy.</span>
           </h1>
-
           <div className="my-7 h-px w-24 bg-white/40 transition-all duration-700 group-hover:w-40" />
-
           <p className="max-w-md text-base leading-7 text-gray-300 md:text-lg">
             Crafting digital experiences with purpose.
           </p>
-
-          {/* Small animated dot */}
           <span
             className="
               absolute
@@ -142,8 +125,6 @@ const Home = () => {
             "
           />
         </div>
-
-        {/* Introduction */}
         <div
           className="
             max-w-md
@@ -168,15 +149,12 @@ const Home = () => {
           >
             Hey, it's me, Maheen.
           </p>
-
           <p className="text-sm leading-7 text-gray-400 md:text-base">
-            I'm a Full-Stack Web Developer passionate about building modern,
-            responsive, and interactive web applications. I turn ideas into
-            functional digital experiences using clean code, creative design,
-            and modern technologies.
+              I'm a Full-Stack Web Developer passionate about building modern,
+              responsive, and interactive web applications. I turn ideas into
+              functional digital experiences using clean code, creative design,
+              and modern technologies.
           </p>
-
-          {/* Animated line */}
           <div
             className="
               mt-7
@@ -188,8 +166,6 @@ const Home = () => {
           />
         </div>
       </div>
-
-      {/* Scroll Indicator */}
       <div
         className="
           absolute bottom-8
@@ -205,7 +181,6 @@ const Home = () => {
         "
       >
         <span>Scroll</span>
-
         <span
           className="
             h-10 w-px
