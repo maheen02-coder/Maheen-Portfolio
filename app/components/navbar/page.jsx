@@ -22,13 +22,13 @@ const Navbar = () => {
         border-r border-white/10
         bg-black/70
         backdrop-blur-xl
+
         max-md:h-16
         max-md:w-full
         max-md:border-r-0
         max-md:border-b
       "
     >
-      {/* Moving Glow */}
       <div
         className="
           pointer-events-none
@@ -42,6 +42,7 @@ const Navbar = () => {
           max-md:top-0
         "
       />
+
       <div
         className="
           relative z-10
@@ -50,37 +51,47 @@ const Navbar = () => {
           items-center
           justify-center
           px-5
+
           max-md:flex-row
           max-md:justify-between
-          max-md:px-4
+          max-md:px-3
+
+          max-[500px]:px-2
         "
       >
-        {/* MAHEEN LOGO */}
         <button
           onClick={() => scrollToSection("intro")}
           className="
             group relative
             mb-16
+            shrink-0
             cursor-pointer
             bg-transparent
             p-0
+
             max-md:mb-0
           "
         >
           <h2
             className="
+              whitespace-nowrap
               text-2xl font-bold
               tracking-[5px]
               text-white
               transition-all duration-500
               group-hover:scale-105
               group-hover:tracking-[9px]
+
               max-md:text-lg
               max-md:tracking-[3px]
+
+              max-[500px]:text-sm
+              max-[500px]:tracking-[2px]
             "
           >
             MAHEEN
           </h2>
+
           <span
             className="
               absolute -right-3 -top-1
@@ -92,14 +103,18 @@ const Navbar = () => {
             "
           />
         </button>
-        {/* Navigation Links */}
+
         <div
           className="
             flex w-full
             flex-col gap-4
+
             max-md:w-auto
             max-md:flex-row
+            max-md:items-center
             max-md:gap-1
+
+            max-[500px]:gap-0
           "
         >
           {links.map((link) => (
@@ -110,6 +125,7 @@ const Navbar = () => {
               className="
                 group relative
                 h-14 w-full
+                shrink-0
                 justify-start
                 overflow-hidden
                 rounded-xl
@@ -123,16 +139,19 @@ const Navbar = () => {
                 hover:bg-white
                 hover:text-black
                 hover:shadow-[0_0_25px_rgba(255,255,255,0.12)]
+
                 max-md:h-10
                 max-md:w-auto
                 max-md:justify-center
-                max-md:px-3
+                max-md:px-2
                 max-md:text-xs
-                max-[500px]:px-2
+
+                max-[500px]:px-1
                 max-[500px]:text-[10px]
+
+                max-[360px]:text-[9px]
               "
             >
-              {/* Liquid Effect */}
               <span
                 className="
                   absolute
@@ -149,10 +168,10 @@ const Navbar = () => {
                   group-hover:w-[130%]
                 "
               />
-              {/* Text */}
               <span
                 className="
                   relative z-20
+                  whitespace-nowrap
                   transition-all duration-500
                   group-hover:translate-x-2
                   group-hover:tracking-wider
@@ -160,7 +179,6 @@ const Navbar = () => {
               >
                 {link.name}
               </span>
-              {/* Right Line */}
               <span
                 className="
                   absolute right-4
@@ -174,7 +192,6 @@ const Navbar = () => {
             </Button>
           ))}
         </div>
-        {/* Vertical Glowing Line */}
         <div
           className="
             absolute right-0
@@ -189,15 +206,13 @@ const Navbar = () => {
             max-md:hidden
           "
         />
-        {/* Bottom Line */}
         <div
           className="
             absolute bottom-16
             h-px w-24
             animate-pulse
             bg-white/30
-            max-md:hidden
-          "
+            max-md:hidden"
         />
       </div>
     </nav>
